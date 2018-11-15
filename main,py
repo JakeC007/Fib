@@ -1,0 +1,18 @@
+def fib(n):
+  if n < 2:
+    return n
+  else:
+    return fib(n-2)+ fib(n-1)
+def main():
+  x = int(input("Number? "))
+  for i in range (0,x):
+    print("")
+    pre_answer = fib(i)
+    answer = pre_answer%10
+    p_arr = ["-","-","-","-","-","-","-","-","-","-"]
+    p_arr[answer] = "*"
+    for y in range(0, 9):
+      print(p_arr[y], end = " ")
+    print("  LED number: %d || Fib Number: %d" %(answer, pre_answer))
+    
+main()
